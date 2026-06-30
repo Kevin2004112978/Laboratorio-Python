@@ -47,7 +47,7 @@ print("Primer día del año (esperado 1):", day_of_year(2023, 1, 1))
 print("Fin de febrero bisiesto (esperado 60):", day_of_year(2024, 2, 29))
 print("Fin de febrero común (esperado 59):", day_of_year(2023, 2, 28))
 
-# --- PRUEBAS DE ARGUMENTOS INVÁLIDOS (esperado None) ---
+
 print("Día inválido en febrero común:", day_of_year(2023, 2, 29))
 print("Mes inválido (13):", day_of_year(2023, 13, 10))
 print("Día negativo:", day_of_year(2023, 5, -5))
