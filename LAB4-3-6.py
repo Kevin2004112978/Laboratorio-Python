@@ -22,25 +22,25 @@ def days_in_month(year, month):
     return days_per_month[month - 1]
 
 def day_of_year(year, month, day):
-    # 1. Validar el año y el mes
+
     if year < 1 or month < 1 or month > 12:
         return None
         
-    # 2. Validar el día según el mes y año específico
+
     max_days = days_in_month(year, month)
     if day < 1 or day > max_days:
         return None
         
-    # 3. Sumar los días de los meses anteriores
+    
     total_days = 0
     for m in range(1, month):
         total_days += days_in_month(year, m)
         
-    # 4. Sumar los días del mes actual
+    
     total_days += day
     return total_days
 
-# --- CASOS DE PRUEBA ---
+
 print("Año bisiesto completo (esperado 366):", day_of_year(2000, 12, 31))
 print("Año común completo (esperado 365):", day_of_year(2021, 12, 31))
 print("Primer día del año (esperado 1):", day_of_year(2023, 1, 1))
